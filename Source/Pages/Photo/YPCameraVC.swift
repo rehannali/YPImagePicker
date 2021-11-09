@@ -65,7 +65,7 @@ internal final class YPCameraVC: UIViewController, UIGestureRecognizerDelegate, 
     
     func start() {
         doAfterLibraryPermissionCheck { [weak self] in
-            doAfterCameraPermissionCheck { [weak self] in
+            self?.doAfterCameraPermissionCheck { [weak self] in
                 guard let previewContainer = self?.v.previewViewContainer else {
                     return
                 }
